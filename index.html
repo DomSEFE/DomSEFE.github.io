@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <script>
-    fetch('target.txt')
+    fetch('target.txt', { cache: 'no-store' })
       .then(r => r.text())
       .then(url => {
         window.location.href = url.trim();
