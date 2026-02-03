@@ -1,16 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
+  <title>Redirecting…</title>
+
+  <!-- Do not index this page -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Fallback if JavaScript is blocked -->
+  <noscript>
+    <meta http-equiv="refresh" content="0; url=https://domsefe.github.io/target.txt">
+  </noscript>
+
   <script>
-    fetch('target.txt', { cache: 'no-store' })
-      .then(r => r.text())
-      .then(url => {
-        window.location.href = url.trim();
-      });
+    (async function () {
+      try {
+        const response = await fetch(
+          'target.txt?v=' + Date.now(),
+          { cache: 'no-store' }
+        );
+
+        const url = (await response.text()).trim();
+
+        if (!url.startsWith('http')) {
+          throw new Error('Invalid URL in target.txt');
+        }
+
+        // replace() avoids cluttering browser history
+        window.location.replace(url);
+
+      } catch (e) {
+        document.body.innerHTML =
+          '<p>Link temporarily unavailable. Please try again later.</p>';
+      }
+    })();
   </script>
 </head>
+
 <body>
-Redirecting…
+  Redirecting…
 </body>
 </html>
