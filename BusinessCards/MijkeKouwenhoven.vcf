@@ -1,0 +1,12 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Kouwenhoven;Mijke;;;
+FN:Mijke Kouwenhoven
+ORG:SEFE
+TITLE:EVP Account Management
+TEL;TYPE=CELL:+31630873143
+TEL;TYPE=WORK:+31885306286
+EMAIL:mijke.kouwenhoven@sefe.eu
+ADR;TYPE=WORK:;;20 TritonStreet;London;;NW1 3BF;UK
+URL:https://www.sefe.eu
+END:VCARD
