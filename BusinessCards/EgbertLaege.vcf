@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Laege;Egbert;;;
+FN:Egbert Laege
+ORG:SEFE
+TITLE:CEO
+TEL;TYPE=CELL:+4915228897344
+EMAIL:egbert.laege@sefe.eu
+ADR;TYPE=WORK:;;20 TritonStreet;London;;NW1 3BF;UK
+URL:https://www.sefe.eu
+END:VCARD
